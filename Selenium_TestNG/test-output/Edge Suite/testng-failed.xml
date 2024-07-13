@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Edge Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Testing Edge(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="selenium_Amazon.Google_Parallel">
+        <methods>
+          <include name="testcase1" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- selenium_Amazon.Google_Parallel -->
+    </classes>
+  </test> <!-- Testing Edge(failed) -->
+</suite> <!-- Failed suite [Edge Suite] -->
