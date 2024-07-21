@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+		 <class name="Maven.Selenium_Maven_Proj1.TestCase_Reg"/>
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_Login"/>
+      <!--<class name="Maven.Selenium_Maven_Proj1.TestCase_Profile"/>
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_Fliter"/>
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_DCheck"/>
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_InLogin"/>
+     
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_Shoe"/>
+      <class name="Maven.Selenium_Maven_Proj1.TestCase15"/>
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_Prod"/>-->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

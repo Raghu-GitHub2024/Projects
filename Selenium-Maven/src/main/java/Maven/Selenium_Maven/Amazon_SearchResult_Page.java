@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class Amazon_SearchResult_Page 
 {
 	WebDriver driver;
-	@FindBy(xpath="//input[@id='twotabsearchtextbox']")
+	@FindBy(xpath="//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[1]/div/span/a/div/img")
 	WebElement First_Prod;
 	
 	public void firstprod_click() 

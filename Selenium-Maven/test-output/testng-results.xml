@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-08T01:12:02 IST" name="Default suite" finished-at="2024-07-08T01:12:19 IST" duration-ms="16628">
+  <suite started-at="2024-07-21T17:38:31 IST" name="Suite" finished-at="2024-07-21T17:38:48 IST" duration-ms="17354">
     <groups>
     </groups>
-    <test started-at="2024-07-08T01:12:02 IST" name="Default test" finished-at="2024-07-08T01:12:19 IST" duration-ms="16628">
-      <class name="Maven.Selenium_Maven.TestCase1">
-        <test-method signature="login_to_search()[pri:0, instance:Maven.Selenium_Maven.TestCase1@56cdfb3b]" started-at="2024-07-08T01:12:02 IST" name="login_to_search" finished-at="2024-07-08T01:12:19 IST" duration-ms="16531" status="PASS">
+    <test started-at="2024-07-21T17:38:31 IST" name="Test" finished-at="2024-07-21T17:38:48 IST" duration-ms="17354">
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_Login">
+        <test-method signature="login_to_search()[pri:0, instance:Maven.Selenium_Maven_Proj1.TestCase_Login@21e360a]" started-at="2024-07-21T17:38:41 IST" name="login_to_search" finished-at="2024-07-21T17:38:48 IST" duration-ms="7913" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_to_search -->
-      </class> <!-- Maven.Selenium_Maven.TestCase1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Maven.Selenium_Maven_Proj1.TestCase_Login -->
+      <class name="Maven.Selenium_Maven_Proj1.TestCase_Reg">
+        <test-method signature="login_to_search()[pri:0, instance:Maven.Selenium_Maven_Proj1.TestCase_Reg@2b91004a]" started-at="2024-07-21T17:38:31 IST" name="login_to_search" finished-at="2024-07-21T17:38:41 IST" duration-ms="9336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_to_search -->
+      </class> <!-- Maven.Selenium_Maven_Proj1.TestCase_Reg -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

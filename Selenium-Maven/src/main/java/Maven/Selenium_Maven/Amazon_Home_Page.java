@@ -15,7 +15,8 @@ public class Amazon_Home_Page
 	
 	public void searching()
 	{
-		search_tf.sendKeys("shoe"+ Keys.ENTER);
+		search_tf.sendKeys("shoe");
+		search_tf.sendKeys(Keys.ENTER);
 	}
 	
 public Amazon_Home_Page(WebDriver driver) {
