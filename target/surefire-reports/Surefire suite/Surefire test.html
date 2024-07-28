@@ -1,0 +1,476 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jul 21 17:45:49 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>576 seconds (576733 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Maven.Selenium_Maven.TestCase2.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven.TestCase2</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.182)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [190e697811b1edbb6b41ac67d0664a50, findElement {using=xpath, value=//*[@id=&quot;search&quot;]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[1]/div/span/a/div/img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAGHUV~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:18735}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:18735/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 190e697811b1edbb6b41ac67d0664a50
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.click(Unknown Source)
+	at Maven.Selenium_Maven.Amazon_SearchResult_Page.firstprod_click(Amazon_SearchResult_Page.java:17)
+	at Maven.Selenium_Maven.TestCase2.login_to_search(TestCase2.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1987354705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1987354705'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.182)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [190e697811b1edbb6b41ac67d0664a50, findElement {using=xpath, value=//*[@id=&quot;search&quot;]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[1]/div/span/a/div/img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAGHUV~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:18735}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:18735/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 190e697811b1edbb6b41ac67d0664a50
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.click(Unknown Source)
+	at Maven.Selenium_Maven.Amazon_SearchResult_Page.firstprod_click(Amazon_SearchResult_Page.java:17)
+	at Maven.Selenium_Maven.TestCase2.login_to_search(TestCase2.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>27</td>
+<td>Maven.Selenium_Maven.TestCase2@37f1104d</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_DCheck.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_DCheck</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Product Description&quot;}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7a6818f02c3828e2181f889ddf0ca0e8, findElement {using=link text, value=Product Description}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAGHUV~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:19808}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:19808/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a6818f02c3828e2181f889ddf0ca0e8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.isDisplayed(Unknown Source)
+	at Maven.proj1.Amazon_Details_Check.Description(Amazon_Details_Check.java:87)
+	at Maven.Selenium_Maven_Proj1.TestCase_DCheck.login_to_search(TestCase_DCheck.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace847174133", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace847174133'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Product Description&quot;}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7a6818f02c3828e2181f889ddf0ca0e8, findElement {using=link text, value=Product Description}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAGHUV~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:19808}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:19808/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a6818f02c3828e2181f889ddf0ca0e8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.isDisplayed(Unknown Source)
+	at Maven.proj1.Amazon_Details_Check.Description(Amazon_Details_Check.java:87)
+	at Maven.Selenium_Maven_Proj1.TestCase_DCheck.login_to_search(TestCase_DCheck.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>59</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_DCheck@65b3f4a4</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase15.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase15</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.click(Unknown Source)
+	at Maven.proj1.Amazon_Cart_WithoutLogin15.addToCart(Amazon_Cart_WithoutLogin15.java:22)
+	at Maven.Selenium_Maven_Proj1.TestCase15.login_to_search(TestCase15.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace648303898", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace648303898'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.click(Unknown Source)
+	at Maven.proj1.Amazon_Cart_WithoutLogin15.addToCart(Amazon_Cart_WithoutLogin15.java:22)
+	at Maven.Selenium_Maven_Proj1.TestCase15.login_to_search(TestCase15.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>32</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase15@1018bde2</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_Fliter.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_Fliter</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#s\-result\-sort\-select_1&quot;}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ccde5ef99869d6f9f082c197b461a735, findElement {using=id, value=s-result-sort-select_1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAGHUV~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:20099}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:20099/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ccde5ef99869d6f9f082c197b461a735
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.sendKeys(Unknown Source)
+	at Maven.proj1.Amazon_Fliter.lowhighsort(Amazon_Fliter.java:34)
+	at Maven.Selenium_Maven_Proj1.TestCase_Fliter.login_to_search(TestCase_Fliter.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1286868539", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1286868539'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#s\-result\-sort\-select_1&quot;}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ccde5ef99869d6f9f082c197b461a735, findElement {using=id, value=s-result-sort-select_1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\RAGHUV~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:20099}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:20099/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ccde5ef99869d6f9f082c197b461a735
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.sendKeys(Unknown Source)
+	at Maven.proj1.Amazon_Fliter.lowhighsort(Amazon_Fliter.java:34)
+	at Maven.Selenium_Maven_Proj1.TestCase_Fliter.login_to_search(TestCase_Fliter.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>90</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_Fliter@f2ff811</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_Reg.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_Reg</td>
+<td></td>
+<td>10</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_Reg@186f8716</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_InLogin.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_InLogin</td>
+<td></td>
+<td>37</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_InLogin@568ff82</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_Shoe.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_Shoe</td>
+<td></td>
+<td>16</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_Shoe@1d8bd0de</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven.TestCase3.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven.TestCase3</td>
+<td></td>
+<td>30</td>
+<td>Maven.Selenium_Maven.TestCase3@55740540</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven.TestCase5.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven.TestCase5</td>
+<td></td>
+<td>41</td>
+<td>Maven.Selenium_Maven.TestCase5@2f54a33d</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_Login.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_Login</td>
+<td></td>
+<td>68</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_Login@50caa560</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven.TestCase1.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven.TestCase1</td>
+<td></td>
+<td>25</td>
+<td>Maven.Selenium_Maven.TestCase1@5609159b</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven.TestCase4.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven.TestCase4</td>
+<td></td>
+<td>40</td>
+<td>Maven.Selenium_Maven.TestCase4@60015ef5</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_Prod.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_Prod</td>
+<td></td>
+<td>66</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_Prod@2a266d09</td></tr>
+<tr>
+<td title='Maven.Selenium_Maven_Proj1.TestCase_Profile.login_to_search()'><b>login_to_search</b><br>Test class: Maven.Selenium_Maven_Proj1.TestCase_Profile</td>
+<td></td>
+<td>28</td>
+<td>Maven.Selenium_Maven_Proj1.TestCase_Profile@5ab9e72c</td></tr>
+</table><p>
+</body>
+</html>
